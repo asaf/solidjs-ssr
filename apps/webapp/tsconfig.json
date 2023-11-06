@@ -1,0 +1,7 @@
+{
+  "extends": "tsconfig/solidjs.json",
+  "compilerOptions": {
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*"]
+}

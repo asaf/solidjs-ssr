@@ -1,0 +1,62 @@
+{
+  "name": "hello",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsup --watch",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "tsup-preset-solid": "^2.1.0",
+    "typescript": "^5.2.2"
+  },
+  "exports": {
+    "worker": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/server.js"
+      }
+    },
+    "browser": {
+      "development": {
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/dev.js"
+        }
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "deno": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/server.js"
+      }
+    },
+    "node": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/server.js"
+      }
+    },
+    "development": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/dev.js"
+      }
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {},
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "solid-js": "^1.8.5"
+  }
+}
